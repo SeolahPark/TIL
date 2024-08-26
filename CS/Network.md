@@ -9,6 +9,7 @@
       - [:question:TCP 관련 질문 1](#questiontcp-관련-질문-1)
       - [:question:TCP 관련 질문 2](#questiontcp-관련-질문-2)
       - [:question:TCP 관련 질문 3](#questiontcp-관련-질문-3)
+    - [HTTP 1.0/2.0/3.0의 정의 및 차이점](#http-10--20--30의-정의-및-차이점)
     - [HTTP와 HTTPS](#http와-https)
     - [HTTP 요청 응답 헤더](#http-요청-응답-헤더)
     - [HTTP와 HTTPS 동작 과정](#http와-https-동작-과정)
@@ -240,6 +241,22 @@
 * Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?
   * A. Connection을 맺을 때 사용하는 포트(Port)는 유한 범위 내에서 사용하고 시간이 지남에 따라 재사용된다. 따라서 두 통신 호스트가 과거에 사용된 포트 번호 쌍을 사용하는 가능성이 존재한다. 서버 측에서는 패킷의 SYN을 보고 패킷을 구분하게 되는데 난수가 아닌 순처적인 Number가 전송된다면 이전의 Connection으로부터 오는 패킷으로 인식할 수 있다. 이런 문제가 발생할 가능성을 줄이기 위해서 난수로 ISN을 설정한다.
   * [관련 Reference](http://asfirstalways.tistory.com/356)
+
+### HTTP 1.0 / 2.0 / 3.0의 정의 및 차이점
+HTTP 1.0 / 2.0 / 3.0의 정의 및 차이점은?
+- 먼저 HTTP란 HyperText Transfer Protocol의 약자 / 텍스트 기반의 통신 규약으로 인터넷에서 데이터를  주고받을 수 있는 프로토콜을 의미한다.
+- HTTP 버전 별 특징
+  (1) HTTP/0.9<br>
+      사용 가능한 메서드는 GET이 유일 / HTTP 헤더가 없기 때문에 전송은 HTML 문서만 가능<br>응답은 오로지 파일 내용 자체로 구성( 상태 혹은 오류 코드가 존재하지 않았음)
+  (2) HTTP/1.0<br>
+      HTTP 헤더 개념 도입 / HTML 파일들 외에 다른 문서들을 전송하는 기능 추가(Content-type)<br>상태 코드 주입( 응답 시작 부분에 상태 코드가 붙게 되면서 브라우저가 요청 성공 실패 여부를 알 수 있음)<br>POST 메서드 추가
+  (3) HTTP/1.1 -  표준 프로토콜<br>
+      첫 번째 표준 버전이며, 메서드에 OPTION, PUT, DELETE, TRACE가 추가되었음<br>기존 모델의 단점을 해결하고자 1번 열린 커넥션을 재사용하는 Persitent Connection이라는 개념과<br>여러 개의 HTTP 요청을 할 수 있는 HTTP Piplelining이라는 개념 등이 생김
+  (4) HTTP/2.0
+      HTTP 메시지를 바이너리 형태의 프레임으로 나누고 TCP 연결 하나로 여러 요청과 응답들을<br>병렬적으로 보내는 특징을 가지며 순서가 뒤섞이더라도 수신 측에서 재조립한다.<br>따라서 여러 개의 연결 없이 병렬 처리도 가능해지며 HOLB문제도 해결
+  (5) HTTP/3.0
+      HTTP 3.0 버전은 UDP를 기반으로 하는 QUIC 프로토콜을 사용<br>QUIC 프로토콜을 사용함으로써 새로운 연결에 대한 HandShake로 인한 Latency를 감소<br>QUIC 프로토콜 : TCP가 가지는 문제점을 해결하고자 구글이 개발한 UDP 기반의 프로토콜
+  * [관련 Reference](https://backendcode.tistory.com/166)
 
 ### HTTP와 HTTPS
 - HTTP 프로토콜
