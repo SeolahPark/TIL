@@ -5,7 +5,7 @@
     - [변수와 데이터 타입](#변수와-데이터-타입)
     - [리스트 VS 튜플](#리스트-VS-튜플)
     - [함수 VS 람다 함수](#함수-VS-람다-함수)
-    - [GIL(Global Interpreter Lock)](#GIL(Global Interpreter Lock))
+    - [GIL(Global Interpreter Lock)](#GIL(Global-Interpreter-Lock))
     - [제너레이터(generator) VS 이터레이터(iterator)](#제너레이터(generator)-VS-이터레이터(iterator))
     - [메모리 관리](#메모리-관리)
     - [데코레이터(decorator)](#데코레이터(decorator))
