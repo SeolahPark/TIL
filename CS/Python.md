@@ -1,7 +1,7 @@
-# 3. Python
+# Python
 **:book: Contents**
 
-- [3. Python](#2-network)
+- [Python](#Python)
     - [변수와 데이터 타입](#변수와-데이터-타입)
     - [리스트 VS 튜플](#리스트-VS-튜플)
     - [함수 VS 람다 함수](#함수-VS-람다-함수)
