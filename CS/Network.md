@@ -67,15 +67,11 @@
     * 응용 프로세스와 직접 관계하여 일반적인 응용 서비스를 수행한다. 
     * 일반적인 응용 서비스는 관련된 응용 프로세스들 사이의 전환을 제공한다. 
 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [https://ko.wikipedia.org/wiki/OSI_%EB%AA%A8%ED%98%95](https://ko.wikipedia.org/wiki/OSI_%EB%AA%A8%ED%98%95)
 
 ### TCP IP의 개념
 <!-- * 네트워크를 상호 연결시켜 정보를 전송할 수 있도록 하는 기능을 가진 다수의 프로토콜이 모여있는 프로토콜 집합
 * 인터넷: 데이터 링크 계층을 지원하는 네트워크는 TCP/IP 프로토콜을 이용하여 상호 연결하는 네트워크 -->
 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
 
 ### TCP와 UDP
 * 네트워크 계층 중 **전송 계층에서 사용하는 프로토콜**
@@ -117,10 +113,6 @@
   * UDP와 TCP는 각각 별도의 포트 주소 공간을 관리하므로 같은 포트 번호를 사용해도 무방하다. 즉, 두 프로토콜에서 동일한 포트 번호를 할당해도 서로 다른 포트로 간주한다.
   * 또한 같은 모듈(UDP or TCP) 내에서도 클라이언트 프로그램에서 동시에 여러 커넥션을 확립한 경우에는 서로 다른 포트 번호를 동적으로 할당한다. (동적할당에 사용되는 포트번호는 49,152~65,535이다.)
 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [http://mangkyu.tistory.com/15](http://mangkyu.tistory.com/15)
-> - [http://ddooooki.tistory.com/21](http://ddooooki.tistory.com/21)
-> - [http://www.inven.co.kr/webzine/news/?news=165870](http://www.inven.co.kr/webzine/news/?news=165870)
 
 ### TCP와 UDP의 헤더 분석
 
@@ -162,12 +154,6 @@
 |Length|헤더와 데이터 포함 전체 길이|16|
 |Checksum|헤더와 데이터의 에러 확인 용도. UDP는 에러 복구를 위한 필드가 불필요하기 때문에 TCP 헤더에 비해 간단|16|
 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [TCP 와 UDP 차이를 자세히 알아보자](https://velog.io/@hidaehyunlee/TCP-%EC%99%80-UDP-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
-> - [TCP, UDP header](https://cysecguide.blogspot.com/2018/04/tcp-udp-header.html)
-> - [TCP 와 UDP [동작원리/헤더/차이점]](https://m.blog.naver.com/PostView.nhn?blogId=minki0127&logNo=220804490550&proxyReferer=https:%2F%2Fwww.google.com%2F)
-> - [https://idchowto.com/?p=18352](https://idchowto.com/?p=18352)
-> - [https://m.blog.naver.com/PostView.nhn?blogId=koromoon&logNo=120162515270&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=koromoon&logNo=120162515270&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
 ### TCP의 3 way handshake와 4 way handshake
 * TCP는 장치들 사이에 논리적인 접속을 성립(establish)하기 위하여 연결을 설정하여 **신뢰성을 보장하는 연결형 서비스** 이다.
@@ -221,10 +207,6 @@
     * 양단 프로세스가 쉬지 않고 데이터를 전송한다고 가정하면 최초 연결 설정 과정에서 전송되는 첫 번째 세그먼트를 제외한 모든 세그먼트의 ACK 비트는 1로 지정된다고 생각할 수 있다.
   * FIN(Finish) / 000001
     * 연결 해제. 세션 연결을 종료시킬 때 사용되며, 더 이상 전송할 데이터가 없음을 의미한다.
-
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [http://needjarvis.tistory.com/157](http://needjarvis.tistory.com/157)
-> - [http://hyeonstorage.tistory.com/286](http://hyeonstorage.tistory.com/286)
 
 #### :question:TCP 관련 질문 1
 * Q. TCP의 연결 설정 과정(3단계)과 연결 종료 과정(4단계)이 단계가 차이나는 이유?
@@ -302,13 +284,6 @@
         - 인터넷 연결이 끊긴 경우 재인증 시간이 소요된다.
             - HTTP는 비연결형으로 웹 페이지를 보는 중 인터넷 연결이 끊겼다가 다시 연결되어도 페이지를 계속 볼 수 있다.
             - 그러나 HTTPS의 경우에는 소켓(데이터를 주고 받는 경로) 자체에서 인증을 하기 때문에 인터넷 연결이 끊기면 소켓도 끊어져서 다시 HTTPS 인증이 필요하다.
-            
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [https://ko.wikipedia.org/wiki/HTTPS](https://ko.wikipedia.org/wiki/HTTPS)
-> - [https://jeong-pro.tistory.com/89](https://jeong-pro.tistory.com/89)
-> - [https://m.blog.naver.com/reviewer__/221294104297](https://m.blog.naver.com/reviewer__/221294104297)
-> - [https://www.ibm.com/support/knowledgecenter/ko/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10630_.htm](https://www.ibm.com/support/knowledgecenter/ko/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10630_.htm)
-
 
 ### HTTP 요청 응답 헤더
 - HTTP 헤더 내 일반 헤더(General Header) 항목
@@ -402,11 +377,6 @@
                 * 만약 주소를 일일이 지정하기 싫다면 *으로 모든 주소에 CORS 요청을 허용되지만 그만큼 보안이 취약해진다.
             * 유사한 헤더로 `Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Methods, Access-Control-Allow-Headers` 등이 있다. 
 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [http://www.ktword.co.kr/abbr_view.php?nav=&m_temp1=5905&id=902](http://www.ktword.co.kr/abbr_view.php?nav=&m_temp1=5905&id=902)
-> - [https://gmlwjd9405.github.io/2019/01/28/http-header-types.html](https://gmlwjd9405.github.io/2019/01/28/http-header-types.html)
-> - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
-
 ### HTTP와 HTTPS 동작 과정
 #### HTTP 동작 과정
 * 서버 접속 -> 클라이언트 -> 요청 -> 서버 -> 응답 -> 클라이언트 -> 연결 종료
@@ -472,12 +442,6 @@
     * 서버와 클라이언트는 session key를 활용해 데이터를 암복호화하여 데이터 송수신
 3. **연결 종료 및 session key 폐기**
 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#2-network)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - [[Network] HTTP의 동작 및 HTTP Message 형식](https://gmlwjd9405.github.io/2019/04/17/what-is-http-protocol.html)
-> - [HTTP 동작 과정](https://jess-m.tistory.com/17)
-> - [HTTP 메시지](https://developer.mozilla.org/ko/docs/Web/HTTP/Messages)
-> - [HTTPS와 SSL 인증서](https://opentutorials.org/course/228/4894)
-
 ### CORS란 
 - CORS(Cross Origin Resource Sharing)란 
     - 웹 서버에게 보안 cross-domain 데이터 전송을 활성화하는 cross-domain 접근 제어권을 부여한다.
@@ -492,10 +456,6 @@
     - Access-Control-Request-Headers로 실제로 보내고자 하는 헤더들을 알린다.
     - Allow 항목들은 Request에 대응되는 것으로, 서버가 허용하는 메서드와 헤더를 응답하는데 사용된다.
     - Request랑 Allow가 일치하면 CORS 요청이 이루어진다.
-
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [https://zamezzz.tistory.com/137](https://zamezzz.tistory.com/137)
-> - [https://developer.mozilla.org/ko/docs/Web/HTTP/Access_control_CORS](https://developer.mozilla.org/ko/docs/Web/HTTP/Access_control_CORS)
 
 ### GET 메서드와 POST 메서드
 * HTTP 프로토콜을 이용해서 서버에 데이터(요청 정보)를 전달할 때 사용하는 방식
@@ -546,11 +506,6 @@
       * 이때 POST 방식을 사용할 경우에 값(링크의 정보)이 Body에 있기 때문에 URL만 전달할 수 없으므로 GET 방식을 사용해야한다. 그러나 글을 저장하는 경우에는 URL을 제공할 필요가 없기 때문에 POST 방식을 사용한다.
 
 <!-- * 클라이언트에서 서버로 데이터를 전송하려면 GET이나 POST 방식밖에 없다. -->
-
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [https://blog.outsider.ne.kr/312](https://blog.outsider.ne.kr/312)
-> - [https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/](https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/)
-> - [https://www.w3schools.com/tags/ref_httpmethods.asp](https://www.w3schools.com/tags/ref_httpmethods.asp)
 
 ### 쿠키와 세션
 * HTTP 프로토콜의 특징
@@ -628,9 +583,6 @@
   * 속도
       * 쿠키 : 클라이언트에 저장되어서 서버에 요청 시 빠르다.
       * 세션 : 실제 저장된 정보가 서버에 있으므로 서버의 처리가 필요해 쿠키보다 느리다.
-
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [https://doooyeon.github.io/2018/09/10/cookie-and-session.html](https://doooyeon.github.io/2018/09/10/cookie-and-session.html)
 
 ### DNS
 
@@ -737,19 +689,8 @@
     * Ex1) CRUD 기능을 모두 POST로만 처리하는 API
     * Ex2) route에 resource, id 외의 정보가 들어가는 경우(/students/updateName)
 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html](https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html)
-> - [https://www.a-mean-blog.com/ko/blog/%ED%86%A0%EB%A7%89%EA%B8%80/_/REST%EC%99%80-RESTful-API](https://www.a-mean-blog.com/ko/blog/%ED%86%A0%EB%A7%89%EA%B8%80/_/REST%EC%99%80-RESTful-API)
-> - [http://mygumi.tistory.com/55](http://mygumi.tistory.com/55)
-> - [https://brainbackdoor.tistory.com/53](https://brainbackdoor.tistory.com/53)
-> - [http://tech.devgear.co.kr/delphi_news/433404](http://tech.devgear.co.kr/delphi_news/433404)
-> - [https://meetup.toast.com/posts/92](https://meetup.toast.com/posts/92)
-> - [https://spoqa.github.io/2012/02/27/rest-introduction.html](https://spoqa.github.io/2012/02/27/rest-introduction.html)
-
 ### 소켓이란
 <!-- * 소켓(Socket)은 TCP/IP를 이용하는 API로 소프트웨어로 작성된 통신의 접속점이다. -->
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
 
 ### Socket.io와 WebSocket의 차이
 * WebSocket
@@ -786,13 +727,6 @@
         * 개발자는 Socket.io로 개발을 하고 클라이언트로 푸쉬 메시지를 보내기만 하면, WebSocket을 지원하지 않는 브라우저의 경우는 브라우저 모델과 버전에 따라서 AJAX Long Polling, MultiPart Streaming, Iframe을 이용한 푸쉬, JSONP Polling, Flash Socket 등 다양한 방법으로 내부적으로 푸쉬 메시지를 보내준다.
         * 즉, WebSocket을 지원하지 않는 어느 브라우져라도 푸쉬 메시지를 일관된 모듈로 보낼 수 있다. 
 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - [https://d2.naver.com/helloworld/1336](https://d2.naver.com/helloworld/1336)
-> - [http://bcho.tistory.com/896](http://bcho.tistory.com/896)
-> - [http://adrenal.tistory.com/20](http://adrenal.tistory.com/20)
-> - [http://blog.jeonghwan.net/socket-io를-이용한-실시간-웹-구현](http://blog.jeonghwan.net/socket-io%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%9B%B9-%EA%B5%AC%ED%98%84/)
-> - [http://woowabros.github.io/woowabros/2017/09/12/realtime-service.html](http://woowabros.github.io/woowabros/2017/09/12/realtime-service.html)
-
 
 ### Frame Packet Segment Datagram
 
@@ -813,11 +747,6 @@ PDU는 SDU(Service Data Unit) 와 PCI(Protocol Control Information)로 구성되
 
 다시 말해, 캡슐화는 어떤 네트워크를 통과하기 위해 전송하려는 데이터를 다른 무언가로 감싸서 보내고 해당 네트워크를 통과하면 감싼 부분을 다시 벗겨내어 전송하는 기능을 말한다.
 
- 
-
- 
-> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
 
 ---
 ## Reference
